@@ -42,18 +42,20 @@ git clone https://github.com/your-username/your-repository.git
 	•	Use VS Code Live Server extension to preview
 
 📊 Integrating Google Analytics & Facebook Pixel
-	1.	Google Analytics:
+	
+ 1.	Google Analytics:
 	•	Go to Google Analytics and create an account.
 	•	Copy the tracking code and paste it inside <head> in index.html.
-	2.	Facebook Pixel:
+	
+ 2.	Facebook Pixel:
 	•	Go to Facebook Pixel and generate a Pixel ID.
 	•	Add the provided script in <head> of index.html.
 
 📞 Contact Us
 
-📧 Email: support@example.com
-📞 Phone: +91 98765 43210
-🔗 LinkedIn: Connect Here
+📧 Email: vegiprasanthi697@gmail.com
+
+🔗 LinkedIn: Vegi Prasanthi
 
 📜 License
 
