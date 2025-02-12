@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+}
+input, select {
+    outline: none;
+    border: 1px solid #ccc;
+}
+input:focus, select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+button {
+    transition: all 0.3s ease-in-out;
+}
+button:hover {
+    transform: scale(1.05);
+}
+/* Mobile First Approach */
+.container {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Tablet View */
+@media (min-width: 768px) {
+    .container {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 1024px) {
+    .container {
+        width: 60%;
+    }
+}
