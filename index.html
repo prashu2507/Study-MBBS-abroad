@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Study MBBS Abroad - Apply to top medical universities in Russia, Uzbekistan, Kazakhstan, and more.">
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Study MBBS Abroad - Apply Now">
+    <meta property="og:description" content="Affordable MBBS programs in top medical universities worldwide.">
+    <meta property="og:image" content="https://yourwebsite.com/banner.jpg">
+    <meta property="og:url" content="https://yourwebsite.com">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Study MBBS Abroad - Apply Now">
+    <meta name="twitter:description" content="Affordable MBBS programs in Russia, Uzbekistan, Kazakhstan, and more.">
+    
+
+    <title>Study MBBS Abroad</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script> <!-- Handles phone code update -->
+<script src="validation.js"></script> <!-- Handles form validation -->
+</head>
+<body class="bg-gray-100">
+
+    <!-- Hero Section -->
+    <header class="bg-blue-600 text-white text-center py-16">
+        <h1 class="text-4xl font-bold">Study MBBS Abroad</h1>
+        <p class="mt-4 text-lg">Affordable, globally recognized medical education. Start your journey today!</p>
+        <a href="#apply" class="mt-6 inline-block bg-yellow-400 text-blue-900 font-bold py-3 px-6 rounded-lg shadow-md hover:bg-yellow-500">Apply Now</a>
+    </header>
+
+    <!-- Why Study MBBS Abroad -->
+    <section class="max-w-5xl mx-auto text-center py-12 px-6">
+        <h2 class="text-3xl font-bold text-blue-700">Why Study MBBS Abroad?</h2>
+        <p class="mt-4 text-gray-700">Top medical universities, low tuition fees, and excellent career opportunities.</p>
+        <div class="grid md:grid-cols-3 gap-6 mt-6">
+            <div class="p-6 bg-white shadow-md rounded-lg">
+                <h3 class="text-lg font-semibold text-blue-600">Affordable Fees</h3>
+                <p>Lower tuition fees than private colleges.</p>
+            </div>
+            <div class="p-6 bg-white shadow-md rounded-lg">
+                <h3 class="text-lg font-semibold text-blue-600">Global Recognition</h3>
+                <p>Degrees recognized by WHO, NMC, and more.</p>
+            </div>
+            <div class="p-6 bg-white shadow-md rounded-lg">
+                <h3 class="text-lg font-semibold text-blue-600">No Entrance Exam</h3>
+                <p>Direct admission without NEET (some universities).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Countries -->
+    <section class="bg-blue-50 py-12">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-blue-700">Top Countries for MBBS</h2>
+            <div class="grid md:grid-cols-3 gap-6 mt-6">
+                <div class="p-6 bg-white shadow-md rounded-lg">
+                    <h3 class="text-lg font-semibold text-gray-800">🇷🇺 Russia</h3>
+                    <p>Affordable fees and quality education.</p>
+                </div>
+                <div class="p-6 bg-white shadow-md rounded-lg">
+                    <h3 class="text-lg font-semibold text-gray-800">🇺🇿 Uzbekistan</h3>
+                    <p>Fast-growing medical universities.</p>
+                </div>
+                <div class="p-6 bg-white shadow-md rounded-lg">
+                    <h3 class="text-lg font-semibold text-gray-800">🇰🇿 Kazakhstan</h3>
+                    <p>Low-cost MBBS programs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Process -->
+    <section class="max-w-5xl mx-auto text-center py-12 px-6">
+        <h2 class="text-3xl font-bold text-blue-700">Admission Process & Eligibility</h2>
+        <ul class="mt-6 text-gray-700 space-y-4">
+            <li>✔ Check university eligibility criteria.</li>
+            <li>✔ Submit required documents (10+2 marks, passport).</li>
+            <li>✔ Receive admission letter & apply for visa.</li>
+            <li>✔ Fly to your dream university!</li>
+        </ul>
+    </section>
+
+    <!-- Call-to-Action Form -->
+    <section id="apply" class="bg-blue-600 py-12 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold">Apply for MBBS Abroad</h2>
+            <p class="mt-4">Fill the form below and our team will contact you soon.</p>
+            <form action="#" method="POST" class="mt-6 bg-white text-gray-800 p-6 rounded-lg shadow-md">
+                <input type="text" name="name" placeholder="Full Name" class="w-full p-3 mb-4 border rounded-lg" required>
+                <input type="email" name="email" placeholder="Email Address" class="w-full p-3 mb-4 border rounded-lg" required>
+
+                <!-- Country Selection -->
+                <select id="country" name="country" class="w-full p-3 mb-2 border rounded-lg" required onchange="updatePhoneCode()">
+                    <option value="">Select Country</option>
+                    <option value="India" data-code="+91">India</option>
+                    <option value="Russia" data-code="+7">Russia</option>
+                    <option value="Uzbekistan" data-code="+998">Uzbekistan</option>
+                    <option value="Kazakhstan" data-code="+7">Kazakhstan</option>
+                    <option value="Philippines" data-code="+63">Philippines</option>
+                    <option value="Georgia" data-code="+995">Georgia</option>
+                    <option value="Kyrgyzstan" data-code="+996">Kyrgyzstan</option>
+                    <option value="Egypt" data-code="+20">Egypt</option>
+                </select>
+                <small class="error" id="countryError"></small>
+
+                <!-- Phone Number with Country Code Dropdown -->
+                <div class="flex mb-2 border rounded-lg overflow-hidden">
+                    <select id="phoneCode" class="w-1/4 p-3 bg-gray-200 text-center">
+                        <option value="+91">+91</option>
+                        <option value="+7">+7</option>
+                        <option value="+998">+998</option>
+                        <option value="+63">+63</option>
+                        <option value="+995">+995</option>
+                        <option value="+996">+996</option>
+                        <option value="+20">+20</option>
+                    </select>
+                    <input type="tel" name="phone" id="phoneNumber" placeholder="Enter Phone Number" class="w-3/4 p-3 border-l" required>
+                </div>
+                <small class="error" id="phoneError"></small>
+
+                <button type="submit" class="w-full bg-blue-600 text-white py-3 font-bold rounded-lg hover:bg-blue-700">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="max-w-5xl mx-auto text-center py-12 px-6">
+        <h2 class="text-3xl font-bold text-blue-700">Frequently Asked Questions</h2>
+        <p class="mt-4 text-gray-700">Find answers to common queries about studying MBBS abroad.</p>
+        <div class="text-left mt-4">
+            <h3 class="font-semibold text-lg text-blue-600">1. What are the eligibility criteria for MBBS abroad?</h3>
+            <p class="text-gray-700">Eligibility varies by country but generally requires 10+2 with PCB subjects and NEET qualification.</p>
+            
+            <h3 class="font-semibold text-lg text-blue-600 mt-4">2. What are the tuition fees for MBBS abroad?</h3>
+            <p class="text-gray-700">Fees vary but are generally between $3,000 - $10,000 per year, depending on the country.</p>
+            
+            <h3 class="font-semibold text-lg text-blue-600 mt-4">3. Is an MBBS degree from abroad valid in India?</h3>
+            <p class="text-gray-700">Yes, if recognized by NMC/MCI, but you must pass the FMGE exam to practice in India.</p>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="bg-blue-50 py-12 text-center">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-blue-700">Contact Us</h2>
+            <p class="mt-4 text-gray-700">Get in touch for more details.</p>
+            <div class="mt-6 text-left">
+                <p class="text-gray-800 font-semibold">📧 Email: <a href="mailto:vegiprasanthi697@gmail.com" class="text-blue-600">vegiprasanthi697@gmail.com</a></p>
+                <p class="text-gray-800 font-semibold mt-2">📞 Phone: <a href="tel:+1234567890" class="text-blue-600">+91 8919107772</a></p>
+                <p class="text-gray-800 font-semibold mt-2">🔗 LinkedIn: <a href="https://linkedin.com/Vegi Prasanthi" class="text-blue-600" target="_blank">Vegi Prasanthi @ LinkedIn</a></p>
+            </div>
+        </div>
+    </section>
+    <!-- Success Popup -->
+    <div id="successPopup" class="hidden fixed top-0 left-0 w-full h-full flex justify-center items-center bg-gray-900 bg-opacity-50">
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <h2 class="text-xl font-bold text-green-600">Form Submitted Successfully!</h2>
+            <p class="mt-2">Our team will contact you soon.</p>
+            <button onclick="closePopup()" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg">OK</button>
+        </div>
+    </div>
+
+ <!-- Footer -->
+    <footer class="text-center py-6 bg-gray-800 text-white">
+        &copy; 2025 Study MBBS Abroad | All Rights Reserved.
+    </footer>
+
+</body>
+</html>
